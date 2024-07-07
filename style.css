@@ -4,7 +4,7 @@
 }
 /*sidebar*/
 .sidebar {
-    height: calc(100vh - 50px);
+    height: calc(100vh - 70px);
     width: 150PX;
     background-color: #343a40;
   }
@@ -22,7 +22,24 @@
 .main_header{
   min-height: 150px;
 }
-
+.quadrato{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(242, 101, 81);
+  color:white;
+  padding:5px;
+  margin: 5px;
+}
+.done{
+  font-size: 12px;
+  width:30px;
+}
+.process,
+.failed{
+  font-size: 12px;
+  width:50px;
+}
 /*media query*/ 
 @media screen and (max-width: 991px) {
     .sidebar {
