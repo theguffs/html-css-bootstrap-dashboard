@@ -27,7 +27,7 @@
         </div>
        </nav>
         <!-- main -->  
-        <main class="d-flex ">
+        <main class="d-flex overflow-y-auto">
            <!-- side bar -->
            <div class="sidebar d-flex flex-column justify-content-between">
                 <div>
@@ -44,9 +44,74 @@
               <div class="row main_header p-3 bg-primary d-sm-flex">
                 <div class="col-12 col-sm-3 text-white d-flex align-items-center pb-5 align-self-start order-sm-1">
                   <span class="px-3">Nuovo Studente</span>
-                  <button class="bg-transparent rounded-3 border border-white quadrato d-flex justify-content-center align-items-center">
+                  <button class="btn bg-transparent rounded-3 border border-white quadrato d-flex justify-content-center align-items-center"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasForm" aria-controls="offcanvasForm">
                     <i class="fa-solid fa-plus text-white"></i>
                   </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasForm" aria-labelledby="offcanvasFormLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasFormLabel">Inserisci un nuovo studente</h5>
+                <button class="btn bg-transparent rounded-3 border border-white quadrato d-flex justify-content-center align-items-center"  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasForm" aria-controls="offcanvasForm">
+                  <i class="fa-solid fa-plus text-white"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasForm" aria-labelledby="offcanvasFormLabel">
+                  <div class="offcanvas-header">
+                      <h5 id="offcanvasFormLabel">Inserisci un nuovo studente</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                      <form>
+                          <div class="mb-3">
+                              <label for="firstName" class="form-label">Nome</label>
+                              <input type="text" class="form-control" id="firstName" placeholder="Nome">
+                          </div>
+                          <div class="mb-3">
+                              <label for="lastName" class="form-label">Cognome</label>
+                              <input type="text" class="form-control" id="lastName" placeholder="Cognome">
+                          </div>
+                          <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email">
+                          </div>
+                          <div class="mb-3">
+                              <label for="password" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="password" placeholder="Password">
+                          </div>
+                          <div class="mb-3">
+                              <label for="address" class="form-label">Indirizzo</label>
+                              <input type="text" class="form-control" id="address" placeholder="Indirizzo">
+                          </div>
+                          <div class="mb-3">
+                              <label for="city" class="form-label">Città</label>
+                              <input type="text" class="form-control" id="city" placeholder="Città">
+                          </div>
+                          <div class="mb-3">
+                              <label for="state" class="form-label">Stato</label>
+                              <select class="form-select" id="state">
+                                  <option selected>Scegli...</option>
+                                  <option value="1">Italia</option>
+                                  <option value="2">Francia</option>
+                                  <option value="3">Germania</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                              <label for="zip" class="form-label">CAP</label>
+                              <input type="text" class="form-control" id="zip" placeholder="CAP">
+                          </div>
+                          <div class="mb-3">
+                              <label for="photo" class="form-label">Foto</label>
+                              <input type="file" class="form-control" id="photo">
+                          </div>
+                          <div class="form-check mb-3">
+                              <input type="checkbox" class="form-check-input" id="terms">
+                              <label class="form-check-label" for="terms">Seleziona per proseguire</label>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Salva</button>
+                          <button type="reset" class="btn btn-warning">Svuota</button>
+                      </form>
+            </div>
+          </div>
+        </div>
+      </div>
               </div>
                 <div class="col-12 col-sm-6">
                   <h1 class="text-white">Boolean</h1>
@@ -67,9 +132,11 @@
                     <p class="fs-1">125</p>
                 </div>
               </div>
+              <div class="cointainer-fluid">
               <div class="row">
-                <div class="col-8 border border-black m-3">
-                  <h3 class="border-bottom border-black">Prossime classi</h3>
+                <div class="col-8 m-3">
+                  <div class="card mb-2">
+                  <h3 class=" card-header">Prossime classi</h3>
                   <table class="table">
                     <thead>
                       <tr>
@@ -181,11 +248,57 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="col-4">
-                  <h3 class="border border-black">Todo</h3>
+                  <div class="card">
+                    <div class="card-header">
+                      <h3>F.A.Q</h3>
+                    </div>
+                    <div class="card-header d-flex justify-content-between">
+                      <p>come raggiungere un nuovo studente?</p>
+                      <p><i class="fa-solid fa-angle-down"></i></p>
+                    </div>
+                    <div class="card-header d-flex justify-content-between">
+                      <p>come raggiungere un nuovo studente?</p>
+                      <p><i class="fa-solid fa-angle-down"></i></p>
+                    </div>
+                    <div class="card-header d-flex justify-content-between">
+                      <p>come raggiungere un nuovo studente?</p>
+                      <p><i class="fa-solid fa-angle-down"></i></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card mb-3">
+                    <div class="card-header">
+                        Todo
+                    </div>
+                    <div class="card m-2">
+                        <form>
+                            <div class=" card-header mb-2">
+                                <input type="checkbox" class="form-check-input" id="task1">
+                                <label class="form-check-label" for="task1">Kickoff nuove classi</label>
+                            </div>
+                            <div class="card-header mb-2">
+                                <input type="checkbox" class="form-check-input" id="task2">
+                                <label class="form-check-label" for="task2">Lezione su Bootstrap 5 in classe #75</label>
+                            </div>
+                            <div class="card-header mb-2">
+                                <input type="checkbox" class="form-check-input" id="task3">
+                                <label class="form-check-label" for="task3">Controllare username github studenti</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                  <div class="card">
+                    <img src="img/stats.jpeg" class="img-fluid">
+                    <h5 class="p-3"><strong>Utenti attivi</strong></h5>
+                    <p class="p-2 card-header">lista degli utenti dell'ultimo mese</p>
+                  </div>
                 </div>
               </div>
-          </div>
+              </div>
+            </div>
+            
         </main>
             <!-- Script Bootstrap -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
